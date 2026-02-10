@@ -93,11 +93,11 @@ const Header = () => {
 
       {/* Mobile Menu Drawer */}
       <div 
-        className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-gray-900 z-[70] shadow-2xl transform transition-transform duration-300 ease-in-out xl:hidden ${
+        className={`fixed top-0 right-0 h-full w-[80%] max-w-sm bg-[#0a0a0a] z-[70] shadow-2xl transform transition-transform duration-300 ease-in-out xl:hidden ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full p-8 text-white">
+        <div className="flex flex-col h-full p-8 text-white bg-[#0a0a0a]">
           <div className="flex justify-between items-center mb-12">
             <div className="flex flex-col">
               <span className="font-bold text-2xl tracking-wider text-white">RAMA</span>
