@@ -21,14 +21,14 @@ const Header = () => {
 
       <nav className="hidden md:flex items-center gap-8">
         <Link href="/" className="text-[#B58E3F] font-semibold border-b-2 border-[#B58E3F]">HOME</Link>
-        <Link href="#about" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">ABOUT US</Link>
-        <Link href="#products" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">
+        <Link href="/about-us" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">ABOUT US</Link>
+        <Link href="/products" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">
           PRODUCTS
         </Link>
-        <Link href="#projects" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">PROJECTS</Link>
-        <Link href="#spaces" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">SPACES</Link>
-        <Link href="#infrastructure" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">INFRASTRUCTURE</Link>
-        <Link href="#contact" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">CONTACT</Link>
+        <Link href="/#projects" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">PROJECTS</Link>
+        <Link href="/#spaces" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">SPACES</Link>
+        <Link href="/#infrastructure" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">INFRASTRUCTURE</Link>
+        <Link href="/contact" className="text-gray-600 hover:text-[#B58E3F] transition-colors font-medium">CONTACT</Link>
       </nav>
 
       <button className="bg-[#C6A052] text-white px-8 py-2.5 rounded-lg font-semibold hover:bg-[#B58E3F] transition-colors uppercase text-sm">
