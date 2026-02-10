@@ -43,7 +43,7 @@ const InfrastructureSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 md:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+    <section id="infrastructure" className="w-full py-20 md:py-32 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

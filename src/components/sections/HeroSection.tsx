@@ -66,41 +66,22 @@ const HeroSection: React.FC = () => {
         </ScrollReveal>
       </div>
 
-      {/* Decorative Product Preview Cards */}
-      <div className="absolute bottom-8 right-8 hidden lg:flex gap-4 z-10">
-        <ScrollReveal animation="zoom-in" delay={500} duration={1000}>
-          <div className="relative w-48 h-64 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
+      {/* Decorative Featured Product Card */}
+      <div className="absolute bottom-12 right-12 hidden lg:block z-10">
+        <ScrollReveal animation="zoom-in" delay={600} duration={1200}>
+          <div className="relative w-64 h-80 rounded-3xl overflow-hidden shadow-2xl border border-white/20 transform hover:scale-105 transition-all duration-500 backdrop-blur-sm">
             <Image
-              src="/images/product-preview-1.jpg"
-              alt="Marble interior preview"
+              src="/images/product-marble.png"
+              alt="Featured Marble Product"
               fill
               className="object-cover"
-              sizes="192px"
+              sizes="256px"
             />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal animation="zoom-in" delay={700} duration={1000}>
-          <div className="relative w-48 h-64 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
-            <Image
-              src="/images/product-preview-2.jpg"
-              alt="Stone interior preview"
-              fill
-              className="object-cover"
-              sizes="192px"
-            />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal animation="zoom-in" delay={900} duration={1000}>
-          <div className="relative w-48 h-64 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform">
-            <Image
-              src="/images/product-preview-3.jpg"
-              alt="Natural stone preview"
-              fill
-              className="object-cover"
-              sizes="192px"
-            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-white text-sm font-medium tracking-widest uppercase mb-1">Featured</p>
+              <p className="text-white text-xl font-bold">Premium Slabs</p>
+            </div>
           </div>
         </ScrollReveal>
       </div>

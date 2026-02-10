@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import ScrollReveal from '../common/ScrollReveal';
 
 const ContactSection: React.FC = () => {
@@ -26,7 +25,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
+    <section id="contact" className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-30" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-100 rounded-full blur-3xl opacity-50" />
@@ -40,7 +39,7 @@ const ContactSection: React.FC = () => {
             </h2>
             <div className="w-20 h-1 bg-amber-600 mx-auto mb-6" />
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Have a project in mind? We'd love to hear from you. Get in touch and let's 
+              Have a project in mind? We&apos;d love to hear from you. Get in touch and let&apos;s 
               discuss how we can bring your vision to life.
             </p>
           </div>

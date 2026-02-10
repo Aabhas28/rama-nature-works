@@ -50,7 +50,7 @@ const SpacesSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 md:py-32 bg-gray-100">
+    <section id="spaces" className="w-full py-20 md:py-32 bg-gray-100">
       <div className="container mx-auto px-6">
         {/* Header */}
         <ScrollReveal animation="fade-up">

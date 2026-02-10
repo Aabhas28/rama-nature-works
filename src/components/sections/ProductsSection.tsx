@@ -47,7 +47,7 @@ const ProductsSection: React.FC = () => {
   const products = getProducts();
 
   return (
-    <section className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black text-white">
+    <section id="products" className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <ScrollReveal animation="fade-up">

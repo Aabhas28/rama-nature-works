@@ -43,7 +43,7 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 md:py-32 bg-white">
+    <section id="projects" className="w-full py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         {/* Header */}
         <ScrollReveal animation="fade-up">

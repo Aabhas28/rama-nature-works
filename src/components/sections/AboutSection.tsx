@@ -4,7 +4,7 @@ import ScrollReveal from '../common/ScrollReveal';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="w-full py-20 md:py-32 bg-gray-50">
+    <section id="about" className="w-full py-20 md:py-32 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
@@ -63,26 +63,6 @@ const AboutSection: React.FC = () => {
                 />
               </div>
 
-              {/* Decorative Image Overlays */}
-              <div className="absolute top-8 -right-4 w-24 h-24 rounded-2xl overflow-hidden shadow-xl hidden xl:block">
-                <Image
-                  src="/images/marble-texture-1.jpg"
-                  alt="Marble texture detail"
-                  fill
-                  className="object-cover"
-                  sizes="96px"
-                />
-              </div>
-
-              <div className="absolute bottom-12 -left-4 w-28 h-28 rounded-2xl overflow-hidden shadow-xl hidden xl:block">
-                <Image
-                  src="/images/marble-texture-2.jpg"
-                  alt="Stone texture detail"
-                  fill
-                  className="object-cover"
-                  sizes="112px"
-                />
-              </div>
             </div>
           </ScrollReveal>
         </div>
