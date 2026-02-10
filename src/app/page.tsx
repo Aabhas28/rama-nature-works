@@ -5,6 +5,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import SpacesSection from '@/components/sections/SpacesSection';
 import InfrastructureSection from '@/components/sections/InfrastructureSection';
 import ContactSection from '@/components/sections/ContactSection';
+import ClientsMarquee from '@/components/sections/ClientsMarquee';
 
 const HomePage: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage: React.FC = () => {
       <ProjectsSection />
       <SpacesSection />
       <InfrastructureSection />
+      <ClientsMarquee />
       <ContactSection />
     </main>
   );
