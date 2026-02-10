@@ -1,11 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/about", "destination": "/" },
-    { "source": "/products", "destination": "/" },
-    { "source": "/projects", "destination": "/" },
-    { "source": "/spaces", "destination": "/" },
-    { "source": "/infrastructure", "destination": "/" },
-    { "source": "/contact", "destination": "/" },
-    { "source": "/about-us", "destination": "/" }
-  ]
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "cleanUrls": true,
+  "trailingSlash": true
 }
