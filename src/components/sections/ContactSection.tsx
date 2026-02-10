@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import ScrollReveal from '../common/ScrollReveal';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -32,154 +33,159 @@ const ContactSection: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Get In Touch
-          </h2>
-          <div className="w-20 h-1 bg-amber-600 mx-auto mb-6" />
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Have a project in mind? We'd love to hear from you. Get in touch and let's 
-            discuss how we can bring your vision to life.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Get In Touch
+            </h2>
+            <div className="w-20 h-1 bg-amber-600 mx-auto mb-6" />
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Have a project in mind? We'd love to hear from you. Get in touch and let's 
+              discuss how we can bring your vision to life.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left: Contact Form */}
-          <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
-                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
+          <ScrollReveal animation="fade-right">
+            <div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
+                    placeholder="John Doe"
+                  />
+                </div>
 
-              {/* Email */}
-              <div>
-                <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
-                  placeholder="john@example.com"
-                />
-              </div>
+                {/* Email */}
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
+                    placeholder="john@example.com"
+                  />
+                </div>
 
-              {/* Phone */}
-              <div>
-                <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
-                  placeholder="+91 98765 43210"
-                />
-              </div>
+                {/* Phone */}
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors"
+                    placeholder="+91 98765 43210"
+                  />
+                </div>
 
-              {/* Message */}
-              <div>
-                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
-                  Your Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
+                {/* Message */}
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+                    Your Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none transition-colors resize-none"
+                    placeholder="Tell us about your project..."
+                  />
+                </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                SEND MESSAGE
-              </button>
-            </form>
-          </div>
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  SEND MESSAGE
+                </button>
+              </form>
+            </div>
+          </ScrollReveal>
 
           {/* Right: Contact Information & Map */}
-          <div className="space-y-8">
-            {/* Contact Cards */}
-            <div className="space-y-6">
-              {/* Address */}
-              <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg 
-                    className="w-6 h-6 text-white" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
-                    />
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
-                    />
-                  </svg>
+          <ScrollReveal animation="fade-left">
+            <div className="space-y-8">
+              {/* Contact Cards */}
+              <div className="space-y-6">
+                {/* Address */}
+                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg 
+                      className="w-6 h-6 text-white" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
+                      />
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Visit Us</h3>
+                    <p className="text-gray-600">
+                      Rama Nature Works<br />
+                      Industrial Area, Udaipur<br />
+                      Rajasthan, India - 313001
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Visit Us</h3>
-                  <p className="text-gray-600">
-                    Rama Nature Works<br />
-                    Industrial Area, Udaipur<br />
-                    Rajasthan, India - 313001
-                  </p>
-                </div>
-              </div>
 
-              {/* Phone */}
-              <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg 
-                    className="w-6 h-6 text-white" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1">Call Us</h3>
+                {/* Phone */}
+                <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                  <div className="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg 
+                      className="w-6 h-6 text-white" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" 
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg mb-1">Call Us</h3>
                   <p className="text-gray-600">
                     +91 98765 43210<br />
                     +91 98765 43211
@@ -200,7 +206,7 @@ const ContactSection: React.FC = () => {
                       strokeLinecap="round" 
                       strokeLinejoin="round" 
                       strokeWidth={2} 
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 0 00-2-2H5a2 0 00-2 2v10a2 0 002 2z" 
                     />
                   </svg>
                 </div>
@@ -253,6 +259,7 @@ const ContactSection: React.FC = () => {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
