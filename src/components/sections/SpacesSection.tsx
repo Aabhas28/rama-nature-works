@@ -50,16 +50,16 @@ const SpacesSection: React.FC = () => {
   ];
 
   return (
-    <section id="spaces" className="w-full py-20 md:py-32 bg-gray-100">
+    <section id="spaces" className="w-full py-16 md:py-32 bg-gray-100 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
         <ScrollReveal animation="fade-up">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Spaces We Transform
             </h2>
             <div className="w-20 h-1 bg-amber-600 mx-auto mb-6" />
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto">
               From intimate residential spaces to grand commercial projects, we bring natural 
               beauty and timeless elegance to every corner.
             </p>
@@ -67,41 +67,41 @@ const SpacesSection: React.FC = () => {
         </ScrollReveal>
 
         {/* Spaces Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {spaces.map((space, index) => (
             <ScrollReveal key={space.id} animation="fade-up" delay={index * 100}>
               <div
-                className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-full"
+                className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-full border border-gray-200"
               >
                 {/* Image Container */}
-                <div className="relative w-full h-72 overflow-hidden">
+                <div className="relative w-full h-64 sm:h-72 overflow-hidden">
                   <Image
                     src={space.image}
                     alt={space.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                   />
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-amber-600 transition-colors">
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 group-hover:text-amber-600 transition-colors">
                     {space.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                     {space.description}
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="mt-4 flex items-center gap-2 text-amber-600 font-semibold opacity-0 group-hover:opacity-100 transition-all group-hover:gap-4">
-                    <span>Explore</span>
+                  <div className="mt-6 flex items-center gap-2 text-amber-600 font-bold opacity-0 md:opacity-0 group-hover:opacity-100 transition-all group-hover:gap-4 uppercase text-xs tracking-widest">
+                    <span>Explore Space</span>
                     <svg 
-                      className="w-5 h-5" 
+                      className="w-4 h-4" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -117,7 +117,9 @@ const SpacesSection: React.FC = () => {
                 </div>
 
                 {/* Decorative Element */}
-                <div className="absolute top-6 right-6 w-12 h-12 bg-amber-600/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-6 right-6 w-10 h-10 bg-amber-600/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="w-2 h-2 bg-amber-600 rounded-full" />
+                </div>
               </div>
             </ScrollReveal>
           ))}

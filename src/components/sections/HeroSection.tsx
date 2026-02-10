@@ -21,24 +21,24 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 h-full flex items-center">
         <ScrollReveal animation="fade-up" delay={200} duration={1200}>
           <div className="max-w-3xl">
             {/* Subtitle */}
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-0.5 bg-amber-600" />
-              <p className="text-amber-600 text-lg font-light tracking-wide">
+            <div className="flex items-center gap-4 mb-4 md:mb-6">
+              <div className="w-12 md:w-16 h-0.5 bg-amber-600" />
+              <p className="text-amber-600 text-base md:text-lg font-light tracking-wide uppercase">
                 Welcome to Rama Nature Works
               </p>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Best Stone Suppliers in Udaipur
             </h1>
 
             {/* Description */}
-            <p className="text-white/90 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl">
+            <p className="text-white/90 text-base md:text-lg lg:text-xl mb-10 leading-relaxed max-w-2xl">
               Rama Nature Works is an innovative marble supplier known for its exceptional 
               quality and distinctive designs featured in our extensive portfolio of over 40 
               products. With our diverse range of more than 500 material references, we 
@@ -46,10 +46,10 @@ const HeroSection: React.FC = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="group flex items-center gap-3 text-white text-lg font-medium hover:gap-5 transition-all duration-300">
+            <button className="group flex items-center gap-3 text-white text-base md:text-lg font-bold hover:gap-5 transition-all duration-300 bg-amber-600 px-8 py-4 rounded-lg hover:bg-amber-700 shadow-xl">
               <span>KNOW MORE</span>
               <svg 
-                className="w-8 h-8 transform group-hover:translate-x-1 transition-transform" 
+                className="w-6 h-6 md:w-8 md:h-8 transform group-hover:translate-x-1 transition-transform" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"

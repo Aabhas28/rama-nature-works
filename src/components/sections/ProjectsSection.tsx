@@ -43,16 +43,16 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section id="projects" className="w-full py-20 md:py-32 bg-white">
+    <section id="projects" className="w-full py-16 md:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
         <ScrollReveal animation="fade-up">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Our Projects
             </h2>
             <div className="w-20 h-1 bg-amber-600 mx-auto mb-6" />
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
               Explore our portfolio of premium stone installations across residential, 
               commercial, and heritage projects.
             </p>
@@ -60,43 +60,43 @@ const ProjectsSection: React.FC = () => {
         </ScrollReveal>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} animation="fade-up" delay={index * 200}>
               <div
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow cursor-pointer h-full"
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer h-full border border-gray-100"
               >
                 {/* Project Image */}
-                <div className="relative w-full h-96 overflow-hidden">
+                <div className="relative w-full h-[300px] sm:h-[400px] md:h-96 overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                     loading="lazy"
                   />
                   
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                  {/* Gradient Overlay - More visible on mobile for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent lg:opacity-80 lg:group-hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Project Info */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform translate-y-6 group-hover:translate-y-0 transition-transform">
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
                   {/* Category Badge */}
-                  <span className="inline-block px-4 py-1 bg-amber-600 text-xs font-semibold uppercase tracking-wider rounded-full mb-3">
+                  <span className="inline-block px-3 py-1 bg-amber-600 text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-lg">
                     {project.category}
                   </span>
 
                   {/* Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2">
                     {project.title}
                   </h3>
 
                   {/* Location */}
-                  <div className="flex items-center gap-2 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-2 text-gray-300">
                     <svg 
-                      className="w-5 h-5" 
+                      className="w-4 h-4 md:w-5 md:h-5 text-amber-500" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -114,15 +114,15 @@ const ProjectsSection: React.FC = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
                       />
                     </svg>
-                    <p className="text-sm">{project.location}</p>
+                    <p className="text-xs md:text-sm">{project.location}</p>
                   </div>
 
-                  {/* View Project Link */}
-                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="inline-flex items-center gap-2 text-amber-400 font-semibold hover:gap-4 transition-all">
+                  {/* View Project Link - Always visible or accessible */}
+                  <div className="mt-4 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                    <span className="inline-flex items-center gap-2 text-amber-400 font-bold text-sm hover:gap-4 transition-all uppercase tracking-wider">
                       View Project
                       <svg 
-                        className="w-5 h-5" 
+                        className="w-4 h-4 md:w-5 md:h-5" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -143,8 +143,8 @@ const ProjectsSection: React.FC = () => {
         </div>
 
         {/* View All Projects Button */}
-        <div className="text-center mt-12">
-          <button className="px-10 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-amber-600 transition-colors shadow-lg hover:shadow-xl">
+        <div className="text-center mt-12 md:mt-16">
+          <button className="px-8 py-3.5 md:px-10 md:py-4 bg-gray-900 text-white font-bold rounded-lg hover:bg-amber-600 transition-all shadow-xl hover:-translate-y-1">
             VIEW ALL PROJECTS
           </button>
         </div>
